@@ -102,7 +102,7 @@ export default function ContactMe(props) {
             <textarea type="text" onChange={handleMessage} value={message} />
             <div className="send-btn">
             
-              <button type="submit"> <a href={link}> 
+              <button type="submit" > <a href={link}> 
                 send
                 </a> 
               </button>
