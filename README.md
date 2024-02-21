@@ -8,7 +8,7 @@ Do check out my cv at [Portfolio](https://chandrimakabiraj.github.io/MyPortfolio
 
 ![3DCC1CFB-D59D-4AFD-8E1D-79D633346562_1_201_a](https://github.com/ChandrimaKabiraj/MyPortfolio/assets/90623273/a95f51c8-c05c-49ce-a15a-dbc4049a3976)
 
-# Summary Page
+### Summary Page
 ![C0F6E845-648A-4110-934E-6A9496E1EDCA_1_201_a](https://github.com/ChandrimaKabiraj/MyPortfolio/assets/90623273/26f77427-d8f0-4e08-a01f-14ef997720f9)
 
 ### Work Experience, Projects and skill
