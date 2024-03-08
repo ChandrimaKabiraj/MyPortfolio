@@ -14,17 +14,20 @@ export default function AboutMe(props) {
 
   const SCREEN_CONSTSANTS = {
     description:
-      "Full stack web developer with background knowledge of MERN stacks with React,Redux,CI/CD and Automation, along with a knack of building applications with utmost efficiency. Efficient professional with a more than 2 years of experience willing to be an asset for an organization.",
+      `A Full stack Developer with Knowledge of Cloud and AI, ability to develop 
+      end-to-end solutions, harness the power of cloud computing and integrate AI 
+      capabilities that empowers businesses to create innovative and data-driven applications 
+      that can provide a competitive edge in the digital marketplace. I believe in continuous learning and adaptability 
+      to stay updated with the evolving technologies in software development, cloud computing, and artificial intelligence.`,
     highlights: {
       bullets: [
-        "Full Stack web and mobile development",
+        "Full Stack web development(JS and Python)",
         "Interactive Front End as per the design",
-        "React and React Native",
-        "Redux for State Mnanagement",
+        "Building ML apps using Scikit",
+        "Building and deploying apps on Cloud",
         "Building REST API",
-        "Managing database",
         "Creating automation scripts with Playwright",
-        "Knowledge of CI/CD tools"
+        "Knowledge of CI/CD tools and Docker"
       ],
       heading: "Here are a Few Highlights:",
     },

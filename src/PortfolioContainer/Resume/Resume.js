@@ -38,6 +38,9 @@ const Resume = (props) => {
         <div className="resume-heading-description">
           <span>{props.description ? props.description : ""}</span>
         </div>
+        <div>
+          <span>{props.link ? props.link : ""}</span>
+        </div>
       </div>
     );
   };
@@ -49,19 +52,21 @@ const Resume = (props) => {
     { label: "Programming Skills", logoSrc: "programming-skills.svg" },
     { label: "Projects", logoSrc: "projects.svg" },
     { label: "Interests", logoSrc: "interests.svg" },
+    { logoSrc: "bullet.svg" },
   ];
 
   //here we have
   const programmingSkillsDetails = [
     { skill: "JavaScript", ratingPercentage: 85 },
     { skill: "React JS", ratingPercentage: 85 },
-    { skill: "SQL", ratingPercentage: 85 },
-    { skill: "Express JS", ratingPercentage: 89 },
-    { skill: "Node JS", ratingPercentage: 89 },
-    { skill: "Mongo Db", ratingPercentage: 70 },
-    { skill: "Jenkins", ratingPercentage: 80 },
+    { skill: "MySQL,MongoDB", ratingPercentage: 85 },
+    { skill: "Node/Express", ratingPercentage: 89 },
+    { skill: "Python", ratingPercentage: 89 },
+    { skill: "AWS", ratingPercentage: 70 },
+    { skill: "Jenkins,Docker", ratingPercentage: 80 },
     { skill: "HTML", ratingPercentage: 80 },
     { skill: "CSS", ratingPercentage: 80 },
+    { skill: "Python", ratingPercentage: 80 },
   ];
 
   const projectsDetails = [
@@ -69,19 +74,23 @@ const Resume = (props) => {
       title: "Personal Portfolio Website",
       duration: { fromDate: "2021", toDate: "2022" },
       description:
-        "A Personal Portfolio website to showcase all my details and projects at one place.",
-      subHeading: "Technologies Used: React JS, Bootsrap",
+        "A Personal Portfolio website to showcase my Work Experience, Project and Educational details at one place.",
+      subHeading: "The website used a frontend email service(EmailJs) and a link to download my resume alongside visiting my linkedIn,Github profiles",
+      link:<a target='_blank'
+      rel='noopener noreferrer' href="https://chandrimakabiraj.github.io/MyPortfolio/">Todo App</a>
     },
     {
-      title: "Art E-shop ",
+      title: "Todo App ",
       duration: { fromDate: "2021", toDate: "2022" },
       description:
-        "An ecommerce application designed to sell art masterpieces online wth payment system integration",
+        "This is a CRUD application hosted on AWS cloud (using S3,lambda,API gateway and DynamoDB) and built using React(frontend) and Node(backend).",
       subHeading:
-        "Technologies Used:  React Native, Mongo DB, Express Js, Node Js, Redux.",
+        "Implemented Auth0 authentication through login and logout with frontend hosted on Github pages and backend on cloud",
+      link:<a target='_blank'
+        rel='noopener noreferrer' href="https://chandrimakabiraj.github.io/Todo-App/">Todo App</a>
     },
     {
-      title: "Form_API ",
+      title: "WebSocket_API ",
       duration: { fromDate: "2021", toDate: "2022" },
       description:
         "This website is for creating and updating users which are stored in SQL database which represents the backend api for any form application",
@@ -111,7 +120,15 @@ const Resume = (props) => {
 
     /* WORK EXPERIENCE */
     <div className="resume-screen-container" key="work-experience">
-      <div className="experience-container">
+      <div className="scroll">
+      <ResumeHeading
+          heading={"THOMSON REUTERS"}
+          subHeading={"SOFTWARE ENGINEER"}
+          description={`Frontend developer crafting visually appealing and highly responsive user interface that hosts media content and live videos from channels across the Globe.
+          I've implemented stream processing solutions using Kafka and Kinesis, enabling real-time data(video) processing for high-throughput application.`}
+          fromDate={"Nov,2023"}
+          toDate={"Present"}
+        />
         <ResumeHeading
           heading={"ELLUCIAN"}
           subHeading={"SOFTWARE ENGINEER I"}
@@ -119,23 +136,15 @@ const Resume = (props) => {
           servers such as Azure AD, Okta, OpenLdap, AD etc. It provides support for near realtime provisioning as well
           as bulk provisioning.Designing UI components and automation scripts using Playwright to automate enabling,edit,configuring and disabling of extensions.`}
           fromDate={"Nov,2022"}
-          toDate={"Present"}
+          toDate={"Nov,2023"}
         />
          <ResumeHeading
           heading={"COGNIZANT"}
-          subHeading={"PROGRAMMAR ANALYST"}
-          description={`Development of well designed, testable, efficient code for new applications and interfaces by creating components on implementation of React.Js and creating API’s for servers in the backend.
-        `}
+          subHeading={"PROGRAMMER ANALYST"}
+          description={`Integrated connection to databases both SQL or NoSQL using ORM/ODM clients for efficient and robust backend API’s.
+          Designing test automation scripts (invoking UI elements/intercepting API responses) using Playwright to automate regression.Created web applications using Express.js and using it to render a website with live API data.`}
           fromDate={"Sept,2021"}
           toDate={"Oct,2022"}
-        />
-        <ResumeHeading
-          heading={"COGNIZANT"}
-          subHeading={"CSD Intern"}
-          description={`Contributed in all phases of design, development and testing of new software features in C/C++, Python or Javascript.
-          Involve tasks like data pre-processing, making graphical output plots, and GUI for small applications.`}
-          fromDate={"july,2021"}
-          toDate={"Aug,2022"}
         />
 
       </div>
@@ -162,6 +171,7 @@ const Resume = (props) => {
 
     /* PROJECTS */
     <div className="resume-screen-container" key="projects">
+      <div className="scroll">
       {projectsDetails.map((projectsDetails, index) => (
         <ResumeHeading
           key={index}
@@ -170,8 +180,10 @@ const Resume = (props) => {
           description={projectsDetails.description}
           fromDate={projectsDetails.duration.fromDate}
           toDate={projectsDetails.duration.toDate}
+          link={projectsDetails.link}
         />
       ))}
+      </div>
     </div>,
 
     /* Interests */
@@ -210,7 +222,7 @@ const Resume = (props) => {
       >
         <img
           className="bullet-logo"
-          src={require(`../../assets/Resume/${bullet.logoSrc}`).default}
+          src={require(`../../assets/Resume/bullet.svg`).default}
           alt="B"
         />
         <span className="bullet-label">{bullet.label}</span>

@@ -98,6 +98,13 @@
   height: 360px;
   width: 100%;
 }
+div.scroll {
+  margin: 4px, 4px;
+  padding: 4px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+}
 
 .resume-heading {
   display: flex;
